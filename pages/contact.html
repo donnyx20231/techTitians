@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="../stylesheets/contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHLA3FbEQBSUPMWzGDy36c3PWkXd4JNaQ&loading=async&libraries=maps,marker&v=beta" defer>
+</script> -->
+</head>
+<body ng-controller="ContactController">
+    <h1 class="head">Get In Touch With Us</h1>
+   <section class="info">
+    <div class="location">
+        <img src="../images/contactimage/location4.png" alt="" height="80px" width="80px"> <br>
+        <h2>Location</h2>
+        <p>TravelSmart, IB<br>
+            Mokola, Ibadan.
+              
+        </p>
+    </div>
+    <div class="location">
+        <img src="../images/contactimage/phone2.png" alt="" height="70px" width="70px"> <br>
+        <h2>Phone & E-mail</h2>
+        <p>+234-8188-177719<br>
+         EriolowaTabby@gmail.com
+             <!-- <span class="title">T</span>ravelSmart, IB,Nigeria.   -->
+        </p>
+    </div>
+    <div class="location">
+        <img src="../images/contactimage/message.jpg" alt="" height="80px" width="80px"> <br>
+        <h2>Stay in Touch</h2>
+        <p>
+            <img src="../images/contactimage/facebook.jpg" alt="" height="30px" width="30px" >
+            <img src="../images/contactimage/twitter2.jpg" alt="" height="30px" width="30px">
+            <img src="../images/contactimage/Gmail.jpg" alt="" height="30px" width="30px">
+            <img src="../images/contactimage/linkedIn.jpg" alt="" height="30px" width="30px">
+        </p>
+    </div>
+   </section>
+    <section class="form">
+        <div class="img">
+            <img src="../images/contactimage/travel-image3.jpg" alt="" class="image">
+        </div>
+        <div class="contact">
+            <input type="text" placeholder="Full-Name" class="name">
+            <input type="email" name="" id="" placeholder="E-mail" class="mail">
+            <input type="text" placeholder="Subject" class="subject"> <br>
+            <textarea name="" id=""  placeholder="Message..." class="message"></textarea>
+          <button class="btn">
+            SEND MESSAGE
+          </button>
+        </div>
+    </section>
+
+    <div id="map">
+        <div class="item2">
+            <span><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2335.167862324794!2d3.349263!3d6.6052746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9232246d658d%3A0x7abcde53f2b47f7!2sAPTECH%20COMPUTER%20EDUCATION%20ALLEN%20AVENUE%20IKEJA!5e1!3m2!1sen!2sng!4v1679485797862!5m2!1sen!2sng" 
+                width="100%" height="450" style="border:0;
+                                                border-radius: 30px;" 
+                                                allowfullscreen="" 
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
+        </div>
+    </div>
+
+
+
+    <script src="./contact.js"></script>
+    
+</body>
+</html

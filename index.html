@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelSmart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="Js/angular-route.js"></script>
+    <script src="Js/angular-route.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/homestyle.css">
+    <link rel="icon" type="image/x-icon" href="images/aboutimages/TRAVEL SMARt (1).png" />
+</head>
+<body ng-app="travel">
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+      
+      <a href="#" class="logo"><span>T</span>ravel Smart</a>
+      <nav class="navbar">
+        <a href="#!/">Home</a>
+        <a href="#!/about">About us</a>
+        <a ng-href="#!/trip">Trip Catalog</a>
+        <a href="#!/tour">Tour Review</a>
+        <a href="#!/contact">Contact us</a>
+      </nav>
+    </header>
+    <div ng-view>
+
+    </div>
+
+   <footer>
+  
+  <div class="footer-section">
+    <div class="footer-section1">
+        <div class="footer-section1-item1">
+            <p class="footer-section1-item1-header"><span>T</span>RAVEL SMART</p>
+            <div class="about-section-span footer-section-span"></div>
+            <p class="about-section-item1-texts">Travel Smart agency is a travel expert providing 5-star group & private tours in Europe and Asia. Our clients travel to 200+ destinations.</p>
+           <p class="about-section-item1-icons">
+            <i class="fa-brands fa-facebook"></i>               
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+           </p>
+           <input type="email" placeholder="Email Address*" id="footer-email">
+        </div>
+  
+        <div class="footer-section1-item3">
+            <p class="footer-section1-item1-header">Navigation</p>
+            <div class="about-section-span footer-section-span"></div>
+            <div class="footer-section1-item3-texts">
+                <p><a href="#!/">Home</a></p>
+                <p><a href="#!/about">About us</a></p>
+                <p><a ng-href="#!/trip">Trip Catalog</a></p>
+                <p><a href="#!/tour">Tour Review</a></p>
+                <p><a href="#!/contact">Contact us</a></p>
+            </div>
+        </div>
+  
+        <div class="footer-section1-item4">
+            <p class="footer-section1-item1-header">Tours</p>
+            <div class="about-section-span footer-section-span"></div>
+            <div class="footer-section1-item4-texts">
+                <p><a href="#paris-tour-section">Incredible Paris</a></p>
+                <p><a href="#zakinthos-tour-section">Zakinthos Beach</a></p>
+                <p><a href="#cappadocia-tour-section">Cappadocia Tour</a></p>
+                <p><a href="#london-tour-section">London Tour</a></p>
+                <p><a href="#paris-tour-section">Incredible Paris</a></p>
+            </div>
+        </div>
+  
+        <div class="footer-section1-item2">
+            <p class="footer-section1-item1-header">Instagram Post</p>
+            <div class="about-section-span footer-section-span"></div>
+            <div class="footer-section1-item2-links">
+                <div class="footer-section1-item2-links-image1">
+                  <a href="https://www.instagram.com/p/DAGmm5tiGfh/?igsh=cTQ4NjZyb3V3eGYy">
+                    <img src="images/homeimage/footer1.jfif" class="footer-section1-item2-links-img1"> 
+                  </a>
+                  <a href="https://www.instagram.com/p/DAGmr2oiqmz/?igsh=YmRpYW5lODk4eXdr">
+                    <img src="images/homeimage/footer2.jfif" class="footer-section1-item2-links-img1"> 
+                  </a>
+                  <a href="https://www.instagram.com/p/DAGm4WqiNKa/?igsh=MTh6enY3Yjl3ZjgxMw==">
+                    <img src="images/homeimage/footer3.jfif" class="footer-section1-item2-links-img1"> 
+                  </a>
+                   
+                </div>
+                <div class="footer-section1-item2-links-image1">
+                  <a href="https://www.instagram.com/p/DAGm94OC-1t/?igsh=MXIwZXhuc2pnbzRmMg=="> 
+                    <img src="images/homeimage/footer4.jfif" class="footer-section1-item2-links-img1"> 
+                  </a>
+                   <a href="https://www.instagram.com/p/DAGnDzKiTXx/?igsh=MXRtc2JzMXF6cjFwcQ==">
+                    <img src="images/homeimage/footer5.jpg" class="footer-section1-item2-links-img1"> 
+                   </a>
+                    <a href="https://www.instagram.com/p/DAGnadqiwxD/?igsh=MTViMWp5NDU5em0zMg==">
+                        <img src="images/homeimage/footer6.jfif" class="footer-section1-item2-links-img1"> 
+                    </a>
+                   
+                 </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="footer-section2">
+        <div class="footer-section2-line"></div>
+        <div class="footer-section2-items">
+            <div class="footer-section2-item1">Copyright@whatever.com and reserved <span id="spanDate"></span></div>
+            <div class="footer-section2-item2">
+                <p><a href="#privacy-policy-section">Privacy</a></p>
+                <p><a href="#terms-of-use-section">Terms of use</a></p>
+                <p><a href="#cookies-policy-section">Cookies</a></p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+</footer>
+      
+      <script src="javascripts/indexscript.js"></script>
+    
+      
+</body>
+
+</html>

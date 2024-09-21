@@ -1,0 +1,499 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 3%;
+}
+/* About us style */
+
+.about-us {
+    display: flex;
+    flex-direction: row;
+    margin-left: 14%;
+    margin-right: 14%;
+    padding-top: 70px;
+}
+.about-us-text {
+    width: 50%;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.about-us-info {
+    font-size: 1.8rem;
+    font-family: "Nunito";
+}
+.about-us-info span {
+    font-size: 24px;
+    color: blue;
+}
+.about-us-header {
+    font-size: 1.4rem;
+    font-family: "Nunito", sans-serif; /* Changed to Nunito */
+    padding-bottom: 10px;
+}
+
+.about-us-para5 {
+    padding-top: 40px;
+}
+.main-button {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family: "Nunito", sans-serif; /* Changed to Nunito */
+    font-weight: bold;
+    background-color: blue;
+    font-size: 11px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.main-button:hover {
+    background-color: white; /* Hover background color */
+    color:  blue; /* Change text color on hover */
+    border: solid 1px blue;
+}
+
+
+.about-us-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.about-us-img-border {
+    width: 50%;
+}
+.subheader {
+    font-size: 1.7rem;
+    color: blue;
+}
+
+.about-section2 {
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: rgb(252, 252, 252);
+    margin-top: 100px;
+}
+.about-section2-header2 {
+    width: 35%;
+}
+.about-section2-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.about-section2-item1 {
+    width: 33%;
+}
+.about-section2-item1-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.about-section2-item2-div1 {
+    width: 42%;
+    padding: 2%;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 3px 1px 5px 3px rgb(236, 235, 235);
+}
+.about-section2-item2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    justify-content: space-between;
+}
+.about-section2-item2-div1-header {
+    font-size: 28px;
+    font-family: "Nunito", sans-serif; /* Changed to Nunito */
+}
+.about-section2-item2-div1-header span {
+    color: rgb(129, 184, 208);
+}
+.about-section2-item2-div1-icon {
+    font-size: 40px;
+    color: rgb(129, 184, 208);
+    margin-top: 10px;
+}
+
+.about-section2-item2-div1-texts {
+    font-size: 19px;
+    padding-top: 10px;
+}
+.about-section-item1-icons i {
+    font-size: 29px;
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.header,
+.open-hours-text2 {
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-family: "Nunito", sans-serif; /* Changed to Nunito */
+    text-decoration-thickness: 5px;
+    color: #252525;
+    font-weight: 900;
+}
+
+/* Our Team Section */
+.our-team-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.container {
+    width: 45%;
+    height: 600px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.cards {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #007bff; */
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%; /* Image will fill the card */
+    object-fit: cover; /* Ensures the image fits without distortion */
+    border-bottom: none; /* No border under image */
+}
+.image1 {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.our-team-section-header {
+    text-align: center;
+}
+.our-team-section-items {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+.team-section-texts {
+    width: 50%;
+    margin-left: 3%;
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-header1 {
+    font-size: 25px;
+    color: blue;
+    font-family: "Nunito", sans-serif; 
+    padding-top: 0;
+    margin-top: 0;
+}
+.our-team-section-header2 {
+    font-size: 40px;
+    font-family: "Nunito", sans-serif; 
+    padding-bottom: 15px;
+}
+.our-team-section-header3 {
+    font-size: 20px;
+    width: 100%;
+    /* padding-left: 20%; */
+    /* padding-top: 20px; */
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-texts-header1 {
+    font-size: 40px;
+    color: blue;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-texts-header2 {
+    font-size: 22px;
+    font-family: "Nunito", sans-serif; /* Changed to Nunito */
+}
+.our-team-section-texts-header3 {
+    font-size: 27px;
+    padding: 15px 0;
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-text1 {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-text2 {
+    line-height: 40px;
+    margin-top: 20px;
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-text2 p {
+    font-size: 21px;
+    font-family: "Nunito", sans-serif; 
+}
+.our-team-section-text2 span {
+    color: blue ;
+    padding-right: 10px;
+}
+.about-section2-header1-item1 {
+    font-size: 35px;
+    font-family: "Nunito", sans-serif; 
+}
+.about-writeup{
+    font-size: 1.5rem;
+}
+.about-section2-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    font-size: 1.5rem;
+}
+.about-section2-item2-div1-icon{
+    color: blue;
+}
+
+.about-section2-item2-div1-header{
+    color: black;
+
+}
+.about-section2-item2-div1-header span{
+color: black;
+}
+
+.ratings-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.achievements {
+    background-image: url(../images/aboutimages/hero4.jpg);
+    display: flex;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: row;
+    background-size: cover;
+    justify-content: space-evenly;
+}
+
+.achievements1 {
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+}
+.achievements1-text1 {
+    font-size: 2rem;
+}
+.achievements1-text2 {
+    padding-bottom: 150px;
+    font-size: 30px;
+}
+.num {
+    font-size: 49px;
+    padding-top: 6px;
+}
+.star {
+    color: rgb(255, 182, 46);
+}
+
+/* Media Query */
+@media (max-width: 1269px) {
+    .our-team-section-items{
+        display: flex;
+        flex-direction: column;
+    }
+    .swiper{
+        width: 80%;
+        height: 1000px;
+    }
+    .team-section-texts{
+        width: 100%;
+       margin-top: 30px;
+    }
+}
+@media (max-width: 1176px) {
+   
+}
+@media (max-width: 1130px) {
+    
+    .about-section2-item2-div1-header{
+        font-size: 25px; 
+     }
+     .about-section2-item2-div1-texts{
+         font-size: 17px;
+     }
+
+}
+@media (max-width: 1030px) {
+    .recent-news-section2-texts{
+        text-align: center;
+    }
+    .recent-news-section2-text5 p span i{
+       display: none;
+    }
+    .recent-news-section2-text5{
+        padding-left: 30px;
+    }
+}
+@media (max-width: 900px) {
+  
+    .about-us{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-us-text{
+        width: 100%;
+        text-align: center;
+    }
+    .about-us-img-border{
+        width: 100%;
+        margin-top: 40px;
+    }
+   
+   
+}
+@media (max-width: 850px) {
+    .about-section2-item2-div1-header{
+        font-size: 21px; 
+     }
+     .about-section2-item2-div1-texts{
+         font-size: 17px;
+     }
+}
+@media (max-width: 850px) {
+   
+    .about-section-item1-texts{
+        width: 60%;
+        padding-left: 20%;
+    }
+   
+}
+@media (max-width: 850px) {
+    .about-section2-item2-div1{
+        width: 100%;
+    }
+    .about-section2-item1{
+        width: 40%;
+    }
+    .about-section2-item2{
+        width: 57%;
+    }
+    .about-section2-item1-image{
+        height: 800px;
+    }
+}
+@media (max-width: 820px) {
+    .about-section2-item2-div1-icon{
+        font-size: 30px;
+}
+}
+@media (max-width: 800px) {
+   .about-section2-item2-div1-texts{
+    font-size:12px ;
+   } 
+   .about-section2-header2{
+    display: none;
+}
+}
+@media only screen and (min-width: 769px) {
+    .swiper-slide:first-child {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide:first-child img {
+      transition: box-shadow 500ms;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child img {
+      box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .swiper-slide:nth-child(2) {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(55%);
+      z-index: 1;
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(-50%);
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(-55%);
+    }
+   
+  }
+  @media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make the container wider on smaller screens */
+    }
+
+    .card {
+        flex: 0 0 100%;
+    }
+}
+@media (max-width: 630px) {
+    .footer-section2-items{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+   
+}
+@media (max-width: 610px) {
+  
+    .achievements{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(max-width:550px){
+  
+  
+}
+@media (max-width: 500px) {
+    .about-section2-item1{
+        display: none;
+    }
+    .about-section2-item2{
+        width: 100%;
+    }
+    .footer-section1-item2-links-img1{
+        width: 90px;
+        height: 90px;
+    }
+}
+@media (max-width: 450px) {
+ 
+     .swiper{
+        display: none;
+     }
+  
+}
+

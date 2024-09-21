@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Trip Catalog</title>
+    <link rel="stylesheet" href="../stylesheets/tripstyles.css">
+    <script src="Js/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-controller="TripController">
+  <div class="body">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>TravelSmart</h2>
+        <ul>
+            <li>
+                <a href="#" ng-click="toggleDropdown('transportation')">Transportation</a>
+                <ul class="dropdown" ng-show="isDropdownVisible.transportation">
+                    <li ng-repeat="item in transportationItems">
+                        <a href="#">{{item}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" ng-click="toggleDropdown('destinations')">Destinations</a>
+            </li>
+            <li>
+                <a href="#" ng-click="toggleActivitiesDropdown()">Activities</a>
+                <ul class="dropdown" ng-show="isActivitiesDropdownVisible">
+                    <li ng-repeat="activity in activities">
+                        <a href="#">{{activity}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Banner Section -->
+        <div class="banner">
+            <div class="deals-end">
+                <span>Deals end: </span>
+                <span id="countdown">5d 20h 37m 44s</span>
+            </div>
+            <div class="banner-content">
+                <h1>Deals of the Week</h1>
+                <p>The thrill of a lifetime, this week get up to 50% off!!</p>
+                
+                <!-- Search Bar and Dropdown -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Where to?" ng-model="searchQuery" class="search-input">
+                    <select class="continent-dropdown" ng-model="selectedContinent" ng-change="filterByContinent()">
+                        <option value="">Choose continent</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="North America">North America</option>
+                        <option value="South America">South America</option>
+                    </select>
+                    <input type="date" class="date-picker" />
+                    <button type="button" class="search-btn" ng-click="searchTrips()">Search deals</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sorting Section -->
+        <div class="sorting">
+            <label for="sort-price">Sort by Price</label>
+            <select id="sort-price" ng-model="sortPrice" ng-change="sortTrips()">
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+
+            <label for="sort-popularity">Sort by Popularity</label>
+            <select id="sort-popularity" ng-model="sortPopularity" ng-change="sortTrips()">
+                <option value="most-popular">Most Popular</option>
+                <option value="least-popular">Least Popular</option>
+            </select>
+
+            <label for="sort-alphabetical">Sort by Name</label>
+            <select id="sort-alphabetical" ng-model="sortAlphabetical" ng-change="sortTrips()">
+                <option value="a-to-z">A to Z</option>
+                <option value="z-to-a">Z to A</option>
+            </select>
+        </div>
+
+        <!-- Catalog Heading -->
+        <div class="catalog-heading">
+            <h2>Explore Our Vacation Packages</h2>
+            <p>Select from a range of exciting trips and deals.</p>
+        </div>
+
+        <div class="catalog-container">
+            <div class="trip-box" ng-repeat="trip in trips | filter:searchQuery | orderBy:sortOrder | limitTo:limit" ng-click="openModal(trip)" ng-click="openModal(trip)">
+                <img ng-src="{{trip.image}}" alt="{{trip.name}}" class="trip-image">
+                
+                <h3>{{trip.name}}</h3>
+                <p>Price: ${{trip.price}}</p>
+                <p>Days: {{trip.days}}</p>
+
+                 <div class="rate">
+                <p class="ratings-title">Ratings:</p>
+                <p class="rating">
+                    <span ng-repeat="n in [] | range:trip.popularity">&#9733;</span>
+                    <span ng-repeat="n in [] | range:(5 - trip.popularity)" class="grey-star">&#9733;</span>
+                </p>
+                </div>
+                <p>Continent: {{trip.continent}}</p>
+            </div>
+           
+        </div>
+        <div class="toggle-button-container" style="text-align: center; margin: 20px 0;">
+            <button type="button" class="toggle-btn" ng-click="toggleShowAll()">
+                {{ showAll ? 'Hide Trips' : 'Show All Trips' }}
+            </button>
+        </div>
+        <div class="package-heading">
+            <h2> Our Vacation Packages</h2>
+        </div>
+        <div class="italy-holiday-card">
+            <div class="greece-left-section">
+                <div class="greece-image-section">
+                    <img src="../images/tripimage/Greece.jpg" alt="Santorini Greece">
+                </div>
+                <div class="greece-offer-section">
+                    <h3>CAPTIVATING SUMMER HOLIDAY</h3>
+                    <h2>IN SANTORINI GREECE</h2>
+                    <p><strong>20th Aug - 4th September</strong></p>
+                    <h4>6 NIGHTS, 7 DAYS</h4>
+                    <h3 class="greece-price">$1.99M</h3>
+    
+                    <h4>INCLUDES:</h4>
+                    <button class="greece-toggle-btn" onclick="toggleGreeceDetails()">Show Details</button>
+                    <div id="greece-details" class="greece-details" style="display: none;">
+                        <ul>
+                            <li>Return Flight</li>
+                            <li>4 Star Hotel Rating</li>
+                            <li>Breakfast, Taxi & Wi-Fi</li>
+                            <li>Airport Transfer</li>
+                            <li>Tour Guide</li>
+                            <li>Private Tailor Made Tour</li>
+                            <li>Santorini Sunset Luxury Sailing</li>
+                            <li>Caldera Day Cruise</li>
+                            <li>Visa Processing from $29,000</li>
+                        </ul>
+                        <p>Contact us for more details: <strong>08171287777</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="greece-right-section">
+                <h2>SUMMER HOLIDAY IN GREECE</h2>
+                <p>In Greece, summer is not just a season – it's a state of mind. Whether you're basking in the sun-kissed beauty of Santorini, exploring the ancient wonders of Athens, or embracing the untamed spirit of Crete, a summer holiday in Greece promises memories that will last a lifetime. Opa!</p>
+                <div class="greece-price-box">
+                    <p>From:</p>
+                    <h3>$3,999,000</h3>
+                </div>
+                <button class="greece-explore-btn">Explore</button>
+                <div class="greece-footer">
+                    <div class="greece-rating">
+                        ★★★★☆
+                    </div>
+                    <p><strong>GREECE</strong> • 6 Nights, 7 Days</p>
+                </div>
+            </div>
+        </div>
+        <div class="italy-holiday-card">
+            <div class="italy-left-section">
+                <div class="italy-image-section">
+                    <img src="../images/tripimage/italy.jpg" alt="Santorini Greece">
+                </div>
+                <div class="italy-offer-section">
+                    <h3>CAPTIVATING SUMMER HOLIDAY</h3>
+                    <h2>IN ITALY</h2>
+                    <p><strong>20th Aug - 4th September</strong></p>
+                    <h4>6 NIGHTS, 7 DAYS</h4>
+                    <h3 class="italy-price">$3.99M</h3>
+    
+                    <h4>INCLUDES:</h4>
+                    <button class="italy-toggle-btn" onclick="toggleitalyDetail()">Show Details</button>
+                    <div id="italy-details" class="italy-details" style="display: none;">
+                        <ul>
+                            <li>Return Flight</li>
+                            <li>4 Star Hotel Rating</li>
+                            <li>Breakfast, Taxi & Wi-Fi</li>
+                            <li>Airport Transfer</li>
+                            <li>Tour Guide</li>
+                            <li>Private Tailor Made Tour</li>
+                            <li>Santorini Sunset Luxury Sailing</li>
+                            <li>Caldera Day Cruise</li>
+                            <li>Visa Processing from $29,000</li>
+                        </ul>
+                        <p>Contact us for more details: <strong>08171287777</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="italy-right-section">
+                <h2>SUMMER HOLIDAY IN ITALY</h2>
+                <p>In Greece, summer is not just a season – it's a state of mind. Whether you're basking in the sun-kissed beauty of Santorini, exploring the ancient wonders of Athens, or embracing the untamed spirit of Crete, a summer holiday in Greece promises memories that will last a lifetime. Opa!</p>
+                <div class="italy-price-box">
+                    <p>From:</p>
+                    <h3>$29,000</h3>
+                </div>
+                <button class="italy-explore-btn">Explore</button>
+                <div class="italy-footer">
+                    <div class="italy-rating">
+                        ★★★★☆
+                    </div>
+                    <p><strong>ITALY</strong> • 6 Nights, 7 Days</p>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+   
+
+  <!-- Modal Structure -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <!-- Left: Carousel Section -->
+        <div class="modal-carousel">
+            <img ng-src="{{selectedTrip.images[selectedTrip.currentImageIndex]}}" alt="{{selectedTrip.name}}" />
+
+            <!-- Carousel navigation buttons -->
+            <div class="carousel-nav">
+                <button class="left" ng-click="prevSlide()">&#10094;</button>
+                <button class="right" ng-click="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Right: Trip Details Section -->
+        <div class="modal-details">
+            <span class="close" ng-click="closeModal()">&times;</span>
+            <h2>{{selectedTrip.name}}</h2>
+            <p class="price">Price: ${{selectedTrip.price}}</p>
+            <p class="days">Days: {{selectedTrip.days}}</p>
+            <p class="continent">Continent: {{selectedTrip.continent}}</p>
+            <p class="continent">Activities: {{selectedTrip.activities}}</p>
+            <p class="description">Description: {{selectedTrip.description}}</p>
+            <div class="rate">
+                <p class="ratings-title">Tour Ratings:</p>
+                <p class="rating">
+                    <span ng-repeat="n in [] | range:selectedTrip.popularity">&#9733;</span>
+                    <span ng-repeat="n in [] | range:(5 - selectedTrip.popularity)" class="grey-star">&#9733;</span>
+                </p>
+            </div>
+            <div class="accommodations">
+                <h3>Accommodations</h3>
+                <ul>
+                    <li ng-repeat="accommodation in selectedTrip.accommodations">
+                        <strong>{{accommodation.type}}</strong> - 
+                        <span class="rating">
+                            <span ng-repeat="n in [] | range:accommodation.rating">&#9733;</span>
+                            <span ng-repeat="n in [] | range:(5 - accommodation.rating)" class="grey-star">&#9733;</span>
+                        </span>
+                        <br>
+                        <span>Price: ${{accommodation.price}}</span><br>
+                        <span>{{accommodation.details}}</span>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="transport-services">
+                <h3>Transport Services</h3>
+                <ul>
+                    <li ng-repeat="transport in selectedTrip.transportServices">
+                        <strong>{{transport.type}}</strong> - Estimated Time: {{transport.estimatedTime}} - Price: ${{transport.price}}<br>
+                        <span>Nearest service: {{transport.nearestService}}</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn">Book Now!</button>
+     
+    
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+}
+body {
+    margin-top: 3%;
+}
+.btn {
+    background-color: var(--dark);
+    border: none;
+    color: #fff;
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 1.8rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--blue);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    /* background-color: rgba(255, 255,255, 0.3); */
+    padding: 10px;
+    position: fixed;
+    height: 100%;
+    color: white;
+    overflow-y: auto;
+    /* top: 0; */
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3A3F5B;
+}
+
+/* Sidebar Dropdown Menu */
+.sidebar ul ul {
+    display: none;
+    list-style: none;
+    background-color: #4A4F73;
+    margin-top: 2px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.sidebar ul li:hover > ul {
+    display: block;
+    margin-left: 20px; 
+}
+
+.sidebar ul ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul ul li a:hover {
+    background-color: #3A3F5B;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* Banner */
+.banner {
+    background-image: url('../images/tripimage/hero4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden; 
+}
+
+.banner-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.continent-dropdown,
+.date-picker {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sorting Section */
+.sorting {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.sorting select {
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Catalog Section */
+.catalog-heading {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.catalog-heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.catalog-heading p {
+    font-size: 18px;
+    color: #555;
+}
+
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.trip-box {
+    width: 270px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease; 
+}
+
+.trip-box:hover {
+    box-shadow: 0 4px 15px black; 
+}
+
+.trip-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.trip h3 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.trip p {
+    margin: 0;
+    color: #333;
+}
+
+.rating {
+    color: gold;
+}
+
+.rating .grey-star {
+    color: lightgrey;
+}
+
+.deals-end {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+/* Modal content divided into two sections */
+.modal-content img {
+    width: 50%; 
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Right side of the modal for text */
+.modal-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.modal-details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.modal-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.modal-details .price, 
+.modal-details .days, 
+.modal-details .continent {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-details .description {
+    font-size: 14px;
+    color: #555;
+}
+
+.ratings-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.rate {
+    display: flex;
+}
+
+/* Carousel Container */
+.modal-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.modal-carousel img {
+    min-width: 90%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-nav button.left {
+    left: 10px;
+}
+
+.carousel-nav button.right {
+    right: 10px;
+}
+
+.package-heading {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Packages */
+.greece-holiday-card,.italy-holiday-card {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+}
+
+.greece-left-section, .greece-right-section,.italy-left-section, .italy-right-section {
+    padding: 20px;
+}
+
+.greece-left-section,.italy-left-section {
+    background-color: #f8f8f8;
+    width: 40%;
+    padding: 20px;
+}
+
+.greece-image-section img,.italy-image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.greece-offer-section h3,.italy-offer-section h3  {
+    color: #F05A28;
+    margin-bottom: 10px;
+}
+
+.greece-offer-section h2, .italy-offer-section h2 {
+    color: #0C4DA2;
+    margin-bottom: 10px;
+}
+
+.greece-offer-section p,.italy-offer-section p {
+    font-weight: bold;
+    color: #0C4DA2;
+    margin-bottom: 10px;
+}
+
+.greece-offer-section h4,.italy-offer-section h4 {
+    margin-bottom: 10px;
+}
+
+.greece-price,.italy-price  {
+    color: #F05A28;
+    font-size: 22px;
+}
+
+.greece-offer-section ul,.italy-offer-section ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.greece-offer-section ul li,.italy-offer-section ul li {
+    margin-bottom: 5px;
+}
+
+.greece-right-section,.italy-right-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.greece-right-section h2,.italy-right-section h2 {
+    color: #0C4DA2;
+    margin-bottom: 10px;
+}
+
+.greece-right-section p,.italy-right-section p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.greece-price-box,.italy-price-box {
+    margin-bottom: 20px;
+}
+
+.greece-price-box p,.italy-price-box p {
+    color: #999;
+    font-size: 12px;
+}
+
+.greece-price-box h3,.italy-price-box h3 {
+    color: #F05A28;
+    font-size: 24px;
+}
+
+.greece-explore-btn,.italy-explore-btn {
+    padding: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 200px;
+}
+
+.greece-explore-btn:hover,.italy-explore-btn:hover {
+    background-color: #0C4DA2;
+}
+
+.greece-footer,.italy-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.greece-rating,.italy-rating {
+    color: #F05A28;
+    font-size: 18px;
+}
+
+.greece-footer p,.italy-footer p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.greece-toggle-btn,.italy-toggle-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.greece-toggle-btn:hover,.italy-toggle-btn:hover {
+    background-color: #083A74;
+}
+
+.greece-details,.italy-details {
+    display: none;
+}
+.toggle-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 1208px) {
+   .sidebar{
+    display: none;
+   }
+}
+@media (max-width: 1128px){
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input,
+    .continent-dropdown,
+    .date-picker,
+    .search-btn {
+        width: 100%; /* Make inputs full width */
+        margin-bottom: 10px; /* Space between inputs */
+    }
+}
+@media (max-width: 792px){
+    .banner-content{
+        margin-top: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; 
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .banner {
+        height: 250px;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+    .banner-content {
+        margin-top: 30%;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input,
+    .continent-dropdown,
+    .date-picker,
+    .search-btn {
+        width: 100%; /* Make inputs full width */
+        margin-bottom: 10px; /* Space between inputs */
+    }
+
+    .trip-box {
+        width: 90%; /* Adjust trip box width */
+    }
+
+    .greece-holiday-card {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+
+    .greece-left-section,
+    .greece-right-section {
+        width: 100%; /* Full width for both sections */
+    }
+
+    .greece-left-section {
+        order: 2; /* Adjust order for layout */
+    }
+
+    .greece-right-section {
+        order: 1; /* Adjust order for layout */
+    }
+}

@@ -1,0 +1,435 @@
+[
+    {
+        "name": "Paris, France",
+        "price": 1200,
+        "popularity": 4,
+        "continent": "Europe",
+        "activities":"Sky Diving and Dancing",
+        "days":"14",
+        "image": "../images/tripimage/paris1.jpg",
+        "images": [
+            "../images/tripimage/paris1.jpg",
+            "../images/tripimage/paris2.jpg",
+            "../images/tripimage/paris3.jpeg"
+        ],
+        "description":"Paris (French pronunciation: [paʁi]) is the capital and largest city of France. With an official estimated population of 2,102,650 residents in January 2023 in an area of more than 105 km2 (41 sq mi), Paris is the fourth-largest city in the European Union and the 30th most densely populated city in the world in 2022.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Tokyo, Japan",
+        "price": 1500,
+        "popularity": 4,
+        "continent": "Asia",
+        "days":"8",
+        "image": "../images/tripimage/asia1.jpg",
+        "images": [
+            "../images/tripimage/asia1.jpg",
+            "../images/tripimage/asia2.jpg",
+            "../images/tripimage/asia3.jpg"
+        ],
+         "description":"It is the country's largest city and is located in east-central Honshu at the head of Tokyo Bay. The site has been inhabited since ancient times. The small fishing village of Edo existed there for centuries before it became the capital of the Tokugawa shogunate in 1603, at the start of the Edo (Tokugawa) period.",
+         "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "New York, USA",
+        "price": 900,
+        "popularity": 5,
+        "continent": "North America",
+        "days":"10",
+        "image": "../images/tripimage/Newyork.jpg",
+        "images": [
+            "../images/tripimage/Newyork.jpg",
+            "../images/tripimage/newyork2.jpg",
+            "../images/tripimage/newyork3.jpg"
+        ],
+        "description":"New York is a global center of finance and commerce, culture, technology, entertainment and media, academics and scientific output, the arts and fashion, and, as home to the headquarters of the United Nations, international diplomacy.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Cape Town, South Africa",
+        "price": 700,
+        "popularity": 3,
+        "continent": "Africa",
+        "days":"14",
+        "image": "../images/tripimage/africa2.jpg",
+        "images": [
+            "../images/tripimage/africa2.jpg",
+            "../images/tripimage/sa.jpg",
+            "../images/tripimage/africa3.jpg"
+        ],
+        "description":"Cape Town, city and seaport, legislative capital of South Africa and capital of Western Cape province. The city lies at the northern end of the Cape Peninsula some 30 miles (50 kilometres), at its southernmost boundary, north of the Cape of Good Hope.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Rome,Itay",
+        "price": 900,
+        "popularity": 2,
+        "continent": "Europe",
+        "days":"10",
+        "image": "../images/tripimage/europe1.jpg",
+        "images": [
+            "../images/tripimage/europe1.jpg",
+            "../images/tripimage/rome2.jpg",
+            "../images/tripimage/rome3.jpg"
+        ],
+        "description":"Rome is the capital of Italy and also of the Province of Rome and of the region of Lazio. With 2.9 million residents in 1,285.3 km2, it is also the country's largest and most populated comune and fourth-most populous city in the European Union by population within city limits.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Nigeria, Africa",
+        "price": 900,
+        "popularity": 1,
+        "continent": "Africa",
+        "days":"10",
+        "image": "../images/tripimage/africa 1.jpg",
+        "images": [
+            "../images/tripimage/africa 1.jpg",
+            "../images/tripimage/naija.jpg",
+            "../images/tripimage/naija2.jpg"
+        ],
+        "description":"Nigeria is located on the west coast of Africa and is the most populous black country in the world, bordering the North Atlantic Ocean, between Benin and Cameroon. Nigeria covers 356,668 sq miles (923,7770 sq kilometers). It is about the same size as California, Nevada and Utah combined.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Belguim",
+        "price": 900,
+        "popularity": 1,
+        "continent": "Europe",
+        "days":"12",
+        "image": "../images/tripimage/beel3.webp",
+        "images": [
+            "../images/tripimage/beel3.webp",
+            "../images/tripimage/bell1.webp",
+            "../images/tripimage/bell2.webp"
+        ],
+        "description":"Belgium is situated in the west of Europe, bordered to the north by the Netherlands, to the east by Germany and the Grand Duchy of Luxembourg and to the south and the west by France. Although its surface area of 30,688 km2 makes it a small country, its location has made it the economic and urban nerve centre of Europe.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 3.5,
+                "price": 220,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 50,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Denmark",
+        "price": 500,
+        "popularity": 4,
+        "continent": "Europe",
+        "days":"10",
+        "image": "../images/tripimage/den 1.webp",
+        "images": [
+            "../images/tripimage/den 1.webp",
+            "../images/tripimage/den 2.webp",
+            "../images/tripimage/den 3.webp"
+        ],
+        "description":"Denmark, the most southerly country in the Nordic Region, is a small, densely populated country, made up of a large number of islands skirted by lovely beaches. Denmark borders Sweden to the east and Germany to the south. The Øresund Bridge connects Sweden to the largest Danish island, Zealand.",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 320,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 40,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    },
+    {
+        "name": "Kenya, Africa",
+        "price": 800,
+        "popularity": 1,
+        "continent": "Africa",
+        "days":"10",
+        "image": "../images/tripimage/ken 2.webp",
+        "images": [
+            "../images/tripimage/ken 2.webp",
+            "../images/tripimage/ken 3.webp",
+            "../images/tripimage/ken1.webp"
+        ],
+        "description":"Kenya is located in East Africa. Its terrain rises from a low coastal plain on the Indian Ocean to mountains and plateaus at its center. Most Kenyans live in the highlands, where Nairobi, the capital, sits at an altitude of 5,500 feet (1,700 meters).",
+        "accommodations": [
+            {
+                "type": "Hotel",
+                "rating": 4.5,
+                "price": 120,
+                "details": "Luxurious hotel with free breakfast."
+            },
+            {
+                "type": "Hostel",
+                "rating": 3.8,
+                "price": 30,
+                "details": "Budget-friendly option with shared rooms."
+            }
+        ],
+        "transportServices": [
+            {
+                "type": "Flight",
+                "estimatedTime": "2 hours",
+                "price": 200,
+                "nearestService": "Airport A"
+            },
+            {
+                "type": "Car",
+                "estimatedTime": "30 minutes",
+                "price": 50,
+                "nearestService": "Car Rental B"
+            },
+            {
+                "type": "Train",
+                "estimatedTime": "1 hour",
+                "price": 30,
+                "nearestService": "Train Station C"
+            }
+        ]
+    }
+]
